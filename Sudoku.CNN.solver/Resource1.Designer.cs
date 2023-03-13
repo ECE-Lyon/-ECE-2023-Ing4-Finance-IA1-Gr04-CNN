@@ -59,5 +59,98 @@ namespace sudoku.CNNsolver {
                 resourceCulture = value;
             }
         }
+
+
+
+
+
+        internal static string data_preprocess
+        {
+            get
+            {
+                return ResourceManager.GetString("data_preprocess", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à import keras
+        ///from keras.layers import Activation
+        ///from keras.layers import Conv2D, BatchNormalization, Dense, Flatten, Reshape
+        ///
+        ///def get_model():
+        ///
+        ///    model = keras.models.Sequential()
+        ///
+        ///    model.add(Conv2D(64, kernel_size=(3,3), activation=&apos;relu&apos;, padding=&apos;same&apos;, input_shape=(9,9,1)))
+        ///    model.add(BatchNormalization())
+        ///    model.add(Conv2D(64, kernel_size=(3,3), activation=&apos;relu&apos;, padding=&apos;same&apos;))
+        ///    model.add(BatchNormalization())
+        ///    model.add(Conv2D(128, kernel_size=(1,1), activation=&apos;relu&apos;, [le reste de la chaîne a été tronqué]&quot;;.
+        /// </summary>
+        internal static string model
+        {
+            get
+            {
+                return ResourceManager.GetString("model", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à import copy
+        ///import keras
+        ///import numpy as np
+        ///from model import get_model
+        ///from data_preprocess import *
+        ///
+        ///
+        ///   
+        ///Sudoku = np.asarray(solve_sudoku(sudoku))
+        ///
+        ///    
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///.
+        /// </summary>
+        internal static string SolverPythonCNN
+        {
+            get
+            {
+                return ResourceManager.GetString("SolverPythonCNN", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à import copy
+        ///import keras
+        ///import numpy as np
+        ///from model import get_model
+        ///from data_preprocess import *
+        ///
+        ///
+        ///   
+        ///Sudoku = np.asarray(solve_sudoku(sudoku))
+        ///
+        ///    
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///.
+        /// </summary>
+        internal static string sudoku_model
+        {
+            get
+            {
+                return ResourceManager.GetString("sudoku.model", resourceCulture);
+            }
+        }
     }
 }

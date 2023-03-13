@@ -7,7 +7,6 @@ using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using Python.Runtime;
-using Sudoku.CNNsolver;
 using Sudoku.Shared;
 
 
@@ -42,20 +41,13 @@ namespace sudoku.CNNsolver
                 PyObject pySudoku = sudok.ToPython();
                 Console.Write("Voulez vous charger un ancien model\n 1:oui\n 2:non je souhaite l'entrainer");
                 int choix = Console.Read();
-
                 // convert the Person object to a PyObject
-
                 PyObject choice = choix.ToPython();
-
                 PyObject pySudokuDB = sudokuDB.ToPython();
-
                 // create a Python variable "person"
                 scope.Set("sudoku", pySudoku);
-
                 scope.Set("sudokuDB", pySudokuDB);
-
                 // the person object may now be used in Python
-
                 scope.Set("choix", choice);
 
 
@@ -94,5 +86,4 @@ namespace sudoku.CNNsolver
     }
 
 
-}
 }

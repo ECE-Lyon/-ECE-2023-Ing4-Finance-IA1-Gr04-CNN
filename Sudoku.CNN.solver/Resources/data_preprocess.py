@@ -49,17 +49,7 @@ def inference_sudoku(sample):
     '''
         This function solve the sudoku by filling blank positions one by one.
     '''
-    choix=0
-
-    while choix !=1 & choix!=2:
-
-       choix = input("Voulez vous charger un ancien model\n 1:oui\n 2:non je souhiate l'entrainer");
-    
-      
-       if choix ==1:
-         model=loadModel()
-       elif choix==2:
-         model=trainModel()
+    model = loadModel()
     
     feat = copy.copy(sample)
     
